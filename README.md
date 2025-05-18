@@ -1,12 +1,42 @@
-# React + Vite
+# 🛒 React Shopping Cart App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive shopping cart application built with **React**, **Tailwind CSS**, and **Redux Toolkit**. It integrates with the [FakeStoreAPI](https://fakestoreapi.com/) to fetch product data, allows users to add items to their cart, and persists cart data across sessions using `localStorage`.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 📦 Product listing fetched using `createAsyncThunk` (Redux Toolkit)
+- 🛍️ Add, remove, and update cart items with Redux
+- 🗂️ Persistent cart with `localStorage` (even after refresh)
+- 🧭 Routing with `react-router-dom`
+- 📱 Fully responsive layout with **Tailwind CSS**
+- 🖼️ Lazy loading product images
+- 🔄 Pagination support
+- 🔍 Accessible components with semantic HTML
+- 🧠 Optimized for performance and user experience
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **React** (Functional Components + Hooks)
+- **Redux Toolkit** (with `createSlice`, `createAsyncThunk`)
+- **Tailwind CSS**
+- **React Router v6**
+- **FakeStoreAPI**
+- **LocalStorage** (for cart persistence)
+
+---
+
+## 🚀 Getting Started
+
+Follow these instructions to set up the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/react-shopping-cart.git
+cd react-shopping-cart
+npm install 
+npm run dev

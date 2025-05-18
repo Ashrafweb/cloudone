@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductById } from '../store/productSlice';
 import { addToCart } from '../store/cartSlice';
 import { CircleChevronLeft } from 'lucide-react';
+import Loader from '../components/ui/Loader';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -14,7 +15,7 @@ const ProductDetails = () => {
     dispatch(fetchProductById(id));
   }, [dispatch, id]);
 
-  if (loading) return <div className="text-center p-10">Loading...</div>;
+  if (loading) return <div className="text-center p-10"> <Loader /></div>;
   if (error) return <div className="text-center p-10 text-red-600">{error}</div>;
  if (!product) return <div className="text-center p-10">Loading...</div>;
 

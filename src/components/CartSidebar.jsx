@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { X, Plus, Minus, Trash2 } from 'lucide-react';
-import { removeFromCart, increaseQty, decreaseQty } from '../store/cartSlice';
+import { removeFromCart, increaseQty, decreaseQty, clearCart } from '../store/cartSlice';
 
 const CartSidebar = ({ isOpen, onClose }) => {
   const dispatch = useDispatch();
@@ -81,6 +81,14 @@ const CartSidebar = ({ isOpen, onClose }) => {
             className="w-full bg-gray-900 text-white hover:text-black py-3 cursor-pointer hover:bg-white border rounded-3xl transition text-base font-medium"
           >
             Proceed to Checkout
+          </button>
+          {/* Clear Cart Button */}
+          <button
+            className="w-full bg-red-500 text-white hover:bg-red-600 py-2 mt-1 rounded-3xl transition text-base font-medium"
+            onClick={() => dispatch(clearCart())}
+            disabled={items.length === 0}
+          >
+            Clear Cart
           </button>
         </div>
       </aside>

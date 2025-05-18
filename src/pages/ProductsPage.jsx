@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../store/productSlice';
 import Pagination from '../components/ui/Pagination';
 import ProductCard from '../components/ProductCard';
+import Loader from '../components/ui/Loader';
 const PRODUCTS_PER_PAGE = 8;
 
 const ProductsPage = () => {
@@ -20,7 +21,7 @@ const ProductsPage = () => {
     (currentPage - 1) * PRODUCTS_PER_PAGE,
     currentPage * PRODUCTS_PER_PAGE
   );
-  if (loading) return <p>Loading...</p>;
+ if (loading) return <Loader />;
   if (error) return <p>Error: {error}</p>;
 
   return (
